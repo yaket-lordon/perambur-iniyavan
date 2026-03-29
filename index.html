@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perambur Iniyavan Catering & Decoration – Chennai's premier catering and decoration house for weddings, receptions and all celebrations.">
+  <title>Perambur Iniyavan — Catering & Decoration</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="c-dot" id="cDot"></div>
+<div class="c-ring" id="cRing"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-ring">
+    <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="45" cy="45" r="42" stroke="rgba(201,168,76,0.18)" stroke-width="1"/>
+      <path d="M45 3 A42 42 0 0 1 87 45" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M45 3 A42 42 0 0 0 3 45" stroke="rgba(201,168,76,0.3)" stroke-width="0.5" stroke-linecap="round"/>
+    </svg>
+    <div class="ld-ring-dot"></div>
+  </div>
+  <p class="ld-name">Perambur Iniyavan</p>
+  <span class="ld-sub">Catering &amp; Decoration</span>
+  <div class="ld-bar"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="Perambur Iniyavan" onerror="this.style.display='none'">
+      <div class="logo-texts">
+        <span class="logo-name">Perambur Iniyavan</span>
+        <span class="logo-tag">Catering &amp; Decoration</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-cta" onclick="openQuote()"><span>Get a Quote</span></button>
+    <div class="hbg" id="hbg" onclick="openMnav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mnav" id="mnav">
+  <button class="mnav-x" onclick="closeMnav()">&#10005;</button>
+  <a href="#home" onclick="closeMnav()">Home</a>
+  <a href="#services" onclick="closeMnav()">Services</a>
+  <a href="#gallery" onclick="closeMnav()">Gallery</a>
+  <a href="#about" onclick="closeMnav()">About</a>
+  <a href="#contact" onclick="closeMnav()">Contact</a>
+  <button class="mnav-cta" onclick="closeMnav();openQuote()">Get a Quote</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('images/Hero_2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/Hero_1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/services_hall decorations.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-deco"></div>
+  <div class="hero-content">
+    <div class="hero-label">Chennai's Premier Event House</div>
+    <h1 class="hero-h1">Where Every<br>Occasion Becomes<em>A Memory</em></h1>
+    <p class="hero-p">Exceptional catering and decoration for weddings, receptions & all celebrations across Chennai.</p>
+    <div class="hero-btns">
+      <a href="#" onclick="openQuote();return false;" class="btn-fill"><span>Get a Quote</span></a>
+      <a href="#gallery" class="btn-ghost">Explore Gallery</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-bar"></div>
+  </div>
+  <div class="hero-dots-v" id="heroDots"></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="mq-track">
+    <!-- duplicated for seamless loop -->
+    <div class="mq-item"><span>Weddings</span><i>✦</i></div>
+    <div class="mq-item"><span>Receptions</span><i>✦</i></div>
+    <div class="mq-item"><span>Engagements</span><i>✦</i></div>
+    <div class="mq-item"><span>Corporate Events</span><i>✦</i></div>
+    <div class="mq-item"><span>Birthday Celebrations</span><i>✦</i></div>
+    <div class="mq-item"><span>Stage Decorations</span><i>✦</i></div>
+    <div class="mq-item"><span>Hall Decorations</span><i>✦</i></div>
+    <div class="mq-item"><span>Premium Catering</span><i>✦</i></div>
+    <div class="mq-item"><span>Weddings</span><i>✦</i></div>
+    <div class="mq-item"><span>Receptions</span><i>✦</i></div>
+    <div class="mq-item"><span>Engagements</span><i>✦</i></div>
+    <div class="mq-item"><span>Corporate Events</span><i>✦</i></div>
+    <div class="mq-item"><span>Birthday Celebrations</span><i>✦</i></div>
+    <div class="mq-item"><span>Stage Decorations</span><i>✦</i></div>
+    <div class="mq-item"><span>Hall Decorations</span><i>✦</i></div>
+    <div class="mq-item"><span>Premium Catering</span><i>✦</i></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="container stats-row">
+    <div class="stat-col rv">
+      <div class="stat-n counter" data-target="500" data-suffix="+">0</div>
+      <div class="stat-l">Events Completed</div>
+    </div>
+    <div class="stat-col rv rv-d2">
+      <div class="stat-n counter" data-target="4.9" data-decimals="1">0</div>
+      <div class="stat-l">Customer Rating ⭐</div>
+    </div>
+    <div class="stat-col rv rv-d3">
+      <div class="stat-n counter" data-target="20" data-suffix="+">0</div>
+      <div class="stat-l">Years of Excellence</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-section" id="services">
+  <div class="container">
+    <div class="svc-head">
+      <div class="svc-head-l rv">
+        <div class="eyebrow eyebrow-left">What We Offer</div>
+        <h2 class="h-display" style="margin-top:14px">Crafted With<br><em>Devotion</em></h2>
+      </div>
+      <div class="svc-head-r rv rv-d2">
+        <p>Every event we touch becomes a masterpiece — from the first flower to the final dish. We deliver precision, elegance and warmth in equal measure.</p>
+        <div class="svc-btns">
+          <button class="svc-btn" onclick="svcSlide(-1)">&#8592;</button>
+          <button class="svc-btn" onclick="svcSlide(1)">&#8594;</button>
+        </div>
+      </div>
+    </div>
+    <div class="svc-wrap">
+      <div class="svc-track" id="svcTrack">
+
+        <div class="svc-card rv" onclick="openService('catering')">
+          <div class="svc-card-img">
+            <img src="images/Service_catering services.jpg" alt="Catering Services">
+            <div class="svc-card-num">01</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Catering Services</h3>
+            <p>Freshly crafted veg & non-veg menus, served with warmth and professional precision.</p>
+            <span class="svc-lnk">Discover</span>
+          </div>
+        </div>
+
+        <div class="svc-card rv rv-d1" onclick="openService('stage')">
+          <div class="svc-card-img">
+            <img src="images/Services_stage decorations.jpg" alt="Stage Decorations">
+            <div class="svc-card-num">02</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Stage Decorations</h3>
+            <p>Breathtaking stage setups that become the visual centrepiece of your celebration.</p>
+            <span class="svc-lnk">Discover</span>
+          </div>
+        </div>
+
+        <div class="svc-card rv rv-d2" onclick="openService('hall')">
+          <div class="svc-card-img">
+            <img src="images/services_hall decorations.jpg" alt="Hall Decorations">
+            <div class="svc-card-num">03</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Hall Decorations</h3>
+            <p>Every corner transformed into a stunning, cohesive and immersive visual experience.</p>
+            <span class="svc-lnk">Discover</span>
+          </div>
+        </div>
+
+        <div class="svc-card rv rv-d3" onclick="openService('snacks')">
+          <div class="svc-card-img">
+            <img src="images/service_snacks and dinning.jpg" alt="Snacks & Dining">
+            <div class="svc-card-num">04</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Snacks & Dining</h3>
+            <p>Elegantly arranged counters and dining halls to keep your guests delighted.</p>
+            <span class="svc-lnk">Discover</span>
+          </div>
+        </div>
+
+        <div class="svc-card rv rv-d4" onclick="openService('food')">
+          <div class="svc-card-img">
+            <img src="images/services veg and non veg food.jpg" alt="Veg & Non-Veg Foods">
+            <div class="svc-card-num">05</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Veg &amp; Non-Veg Foods</h3>
+            <p>An authentic and contemporary range of dishes, prepared fresh by our master chefs.</p>
+            <span class="svc-lnk">Discover</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUISINE FULL-BLEED PANELS -->
+<section class="cuisine-wrap" id="cuisine">
+
+  <div class="cuis-panel rv">
+    <div class="cuis-img">
+      <img src="images/cuisine_custom menu.jpg" alt="Custom Menu">
+    </div>
+    <div class="cuis-txt">
+      <div class="cuis-eyebrow">Tailored Flavours</div>
+      <h2>A Menu as<br><em>Unique as Your Day</em></h2>
+      <p>We collaborate with you to design a bespoke menu that reflects your heritage, preferences and occasion — from traditional South Indian feasts to multi-cuisine spreads.</p>
+      <a href="menu.html" class="btn-outline"><span>View Full Menu</span></a>
+    </div>
+  </div>
+
+  <div class="cuis-panel rv">
+    <div class="cuis-img">
+      <img src="images/cusine_luxury .jpg" alt="Luxury Setup">
+    </div>
+    <div class="cuis-txt">
+      <div class="cuis-eyebrow">Refined Presentation</div>
+      <h2>Dining as an<br><em>Experience</em></h2>
+      <p>Our luxury setups transform dining into theatre — elegant tableware, live stations, ambient lighting and impeccable service that elevates every meal.</p>
+      <a href="#contact" class="btn-outline"><span>Plan Your Event</span></a>
+    </div>
+  </div>
+
+  <div class="cuis-panel rv">
+    <div class="cuis-img">
+      <img src="images/cusine profesional staff.jpg" alt="Professional Staff">
+    </div>
+    <div class="cuis-txt">
+      <div class="cuis-eyebrow">Expert Team</div>
+      <h2>People Who<br><em>Care Deeply</em></h2>
+      <p>Our experienced chefs and hospitality team bring decades of expertise and a personal touch to every event — ensuring every guest feels celebrated.</p>
+      <a href="#about" class="btn-outline"><span>About Us</span></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gal-section" id="gallery">
+  <div class="container">
+    <div class="eyebrow rv">Our Work</div>
+    <h2 class="h-display h-display-center rv rv-d1" style="margin-top:14px">A Glimpse of<br><em>Our Events</em></h2>
+    <div class="gold-rule rv rv-d2"><span>Gallery</span></div>
+    <div class="gal-mosaic">
+      <div class="g-item rv" onclick="openLb(this.querySelector('img').src,'Professional Catering')">
+        <img src="images/cusine profesional staff.jpg" alt="Catering Staff">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Catering</p></div></div>
+      </div>
+      <div class="g-item rv rv-d1" onclick="openLb(this.querySelector('img').src,'Luxury Setup')">
+        <img src="images/cusine_luxury .jpg" alt="Luxury Setup">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Luxury Setup</p></div></div>
+      </div>
+      <div class="g-item rv rv-d2" onclick="openLb(this.querySelector('img').src,'Hall Decoration')">
+        <img src="images/services_hall decorations.jpg" alt="Hall Decoration">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Hall Décor</p></div></div>
+      </div>
+      <div class="g-item rv rv-d1" onclick="openLb(this.querySelector('img').src,'Stage Decoration')">
+        <img src="images/Services_stage decorations.jpg" alt="Stage Decoration">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Stage Décor</p></div></div>
+      </div>
+      <div class="g-item rv rv-d2" onclick="openLb(this.querySelector('img').src,'Custom Menu')">
+        <img src="images/cuisine_custom menu.jpg" alt="Custom Menu">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Custom Menu</p></div></div>
+      </div>
+      <div class="g-item rv rv-d3" onclick="openLb(this.querySelector('img').src,'Snacks & Dining')">
+        <img src="images/service_snacks and dinning.jpg" alt="Snacks & Dining">
+        <div class="g-ov"><div class="g-ov-inner"><span>⊕</span><p>Snacks & Dining</p></div></div>
+      </div>
+    </div>
+    <div class="gal-cta rv">
+      <a href="gallery.html" class="btn-outline"><span>View All Photos</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb()">
+  <button class="lb-x" onclick="closeLb()">&#10005;</button>
+  <img id="lbImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-l rv">
+        <div class="eyebrow eyebrow-left">Our Story</div>
+        <h2 class="h-display" style="margin-top:14px">Two Decades of<br><em>Making Moments</em></h2>
+        <p>Perambur Iniyavan Catering & Decoration was born from a love for celebration. For over 20 years we have served Chennai's families — bringing warmth, artistry and impeccable hospitality to every occasion, big or small.</p>
+      </div>
+      <div class="about-r rv rv-d2">
+        <div class="why-tile"><div class="w-icon">🏆</div><h3>20+ Years Experience</h3></div>
+        <div class="why-tile"><div class="w-icon">🍽️</div><h3>Quality Food</h3></div>
+        <div class="why-tile"><div class="w-icon">✨</div><h3>Premium Decoration</h3></div>
+        <div class="why-tile"><div class="w-icon">⏱️</div><h3>On-Time Delivery</h3></div>
+        <div class="why-tile"><div class="w-icon">💰</div><h3>Affordable Pricing</h3></div>
+        <div class="why-tile"><div class="w-icon">❤️</div><h3>Personal Touch</h3></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-map">
+    <iframe src="https://www.google.com/maps?q=Perambur,Chennai&output=embed" allowfullscreen loading="lazy" title="Our Location"></iframe>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="eyebrow rv">Get in Touch</div>
+    <h2 class="h-display h-display-center rv rv-d1" style="margin-top:14px">Ready to Plan<br><em>Your Event?</em></h2>
+    <div class="gold-rule rv rv-d2"><span>Contact</span></div>
+    <div class="contact-cards">
+      <div class="cc rv">
+        <div class="cc-icon">📞</div>
+        <h3>Call Us</h3>
+        <p>+91 70106 71647</p>
+      </div>
+      <div class="cc rv rv-d2">
+        <div class="cc-icon">📧</div>
+        <h3>Email Us</h3>
+        <p>info@iniyavancatering.com</p>
+      </div>
+      <div class="cc rv rv-d3">
+        <div class="cc-icon">📍</div>
+        <h3>Visit Us</h3>
+        <p>Perambur, Chennai</p>
+      </div>
+    </div>
+    <div class="contact-btns rv">
+      <a href="tel:+917010671647" class="c-btn c-btn-gold"><span>Call Now</span></a>
+      <a href="https://wa.me/917010671647" target="_blank" rel="noopener" class="c-btn c-btn-green"><span>WhatsApp</span></a>
+      <button onclick="openQuote()" class="c-btn c-btn-fill"><span>Get a Quote</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <div class="f-logo">Perambur Iniyavan</div>
+      <p>Premium catering and decoration services for all occasions across Chennai since 2004.</p>
+      <div class="f-socials">
+        <a href="https://www.instagram.com/peramburiniyavan/?hl=en" target="_blank" rel="noopener" title="Instagram">📸</a>
+        <a href="#" target="_blank" rel="noopener" title="Facebook">📘</a>
+        <a href="https://wa.me/917010671647" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Catering Services</li>
+        <li>Stage Decorations</li>
+        <li>Hall Decorations</li>
+        <li>Snacks & Dining</li>
+        <li>Veg & Non-Veg Foods</li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>+91 70106 71647</li>
+        <li>info@iniyavancatering.com</li>
+        <li>Perambur, Chennai</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Perambur Iniyavan Catering & Decoration. All rights reserved.</p>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</footer>
+
+<!-- QUOTE POPUP -->
+<div class="popup-bg" id="quotePopup">
+  <div class="popup-card">
+    <button class="px" onclick="closeQuote()">&#10005;</button>
+    <h2>Get a Quote</h2>
+    <p class="p-sub">Fill in the details and we'll reach out within 24 hours.</p>
+    <form id="quoteForm" onsubmit="submitQuote(event)">
+      <div class="f-row">
+        <div class="f-g"><label>First Name *</label><input type="text" name="firstName" placeholder="Raj" required></div>
+        <div class="f-g"><label>Last Name *</label><input type="text" name="lastName" placeholder="Kumar" required></div>
+      </div>
+      <div class="f-row">
+        <div class="f-g"><label>Email *</label><input type="email" name="email" placeholder="raj@example.com" required></div>
+        <div class="f-g"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 00000 00000" required></div>
+      </div>
+      <div class="f-g">
+        <label>Event Type *</label>
+        <select name="eventType" required>
+          <option value="">Select Event Type</option>
+          <option>Wedding</option>
+          <option>Reception</option>
+          <option>Engagement</option>
+          <option>Birthday</option>
+          <option>Corporate Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="f-g">
+        <label>Services Required</label>
+        <div class="chk-grid">
+          <label class="cl"><input type="checkbox" name="services" value="Catering Services"> Catering Services</label>
+          <label class="cl"><input type="checkbox" name="services" value="Stage Decorations"> Stage Decorations</label>
+          <label class="cl"><input type="checkbox" name="services" value="Hall Decorations"> Hall Decorations</label>
+          <label class="cl"><input type="checkbox" name="services" value="Snacks & Dining"> Snacks & Dining</label>
+          <label class="cl"><input type="checkbox" name="services" value="Food" id="foodChk"> Veg & Non-Veg Foods</label>
+        </div>
+        <div class="food-box" id="foodBox">
+          <span class="food-box-lbl">Select Meal Times</span>
+          <div class="chk-grid">
+            <label class="cl"><input type="checkbox" name="foodTime" value="Breakfast"> Breakfast</label>
+            <label class="cl"><input type="checkbox" name="foodTime" value="Brunch"> Brunch</label>
+            <label class="cl"><input type="checkbox" name="foodTime" value="Lunch"> Lunch</label>
+            <label class="cl"><input type="checkbox" name="foodTime" value="Dinner"> Dinner</label>
+            <label class="cl"><input type="checkbox" name="foodTime" value="All Day"> All Day</label>
+          </div>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-g"><label>Event Date *</label><input type="date" name="date" required></div>
+        <div class="f-g"><label>Number of Guests *</label><input type="number" name="guests" placeholder="e.g. 250" min="1" required></div>
+      </div>
+      <div class="f-row">
+        <div class="f-g"><label>Event Location *</label><input type="text" name="location" placeholder="Venue / Area" required></div>
+        <div class="f-g"><label>Budget (₹)</label><input type="text" name="budget" placeholder="e.g. ₹50,000"></div>
+      </div>
+      <div class="f-g"><label>Additional Notes</label><textarea name="comments" placeholder="Any special requests…"></textarea></div>
+      <button type="submit" class="f-submit" id="fSubmit"><span>Submit Enquiry</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="popup-bg" id="successPopup">
+  <div class="suc-card">
+    <div class="suc-ico">🎉</div>
+    <h2>Thank You!</h2>
+    <p>Your enquiry has been sent successfully.<br>We'll be in touch within 24 hours.</p>
+    <button class="suc-close" onclick="closeSuc()">Close</button>
+  </div>
+</div>
+
+<!-- SERVICE POPUP -->
+<div class="popup-bg" id="svcPopup">
+  <div class="popup-card svc-popup">
+    <button class="px" onclick="closeSvc()">&#10005;</button>
+    <h2 id="svcTitle"></h2>
+    <p id="svcDesc"></p>
+    <ul class="svc-feats" id="svcFeats"></ul>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

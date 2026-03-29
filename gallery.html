@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Perambur Iniyavan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="c-dot" id="cDot"></div>
+<div class="c-ring" id="cRing"></div>
+
+<div class="pg-top">
+  <a href="index.html" class="pg-back">&#8592; Back</a>
+  <div class="eyebrow" style="margin-bottom:12px">Our Work</div>
+  <h1>Our <em>Gallery</em></h1>
+  <p>A curated collection of our finest events, decorations & cuisine</p>
+</div>
+
+<div class="tab-row">
+  <button class="tab-btn active" onclick="filterGal('all',this)">All</button>
+  <button class="tab-btn" onclick="filterGal('dec',this)">Decorations</button>
+  <button class="tab-btn" onclick="filterGal('food',this)">Food & Catering</button>
+  <button class="tab-btn" onclick="filterGal('evt',this)">Events</button>
+  <button class="tab-btn" onclick="filterGal('vid',this)">Videos</button>
+</div>
+
+<div class="gal-mason" id="galGrid">
+  <div class="gal-it dec" data-type="image" data-label="Stage Decoration">
+    <img src="images/Services_stage decorations.jpg" alt="Stage Decoration" loading="lazy">
+    <div class="gal-bdg dec">Décor</div>
+    <div class="gal-hov"><span>⊕</span><p>Stage Decoration</p></div>
+  </div>
+  <div class="gal-it dec" data-type="image" data-label="Hall Decoration">
+    <img src="images/services_hall decorations.jpg" alt="Hall Decoration" loading="lazy">
+    <div class="gal-bdg dec">Décor</div>
+    <div class="gal-hov"><span>⊕</span><p>Hall Decoration</p></div>
+  </div>
+  <div class="gal-it food" data-type="image" data-label="Custom Menu">
+    <img src="images/cuisine_custom menu.jpg" alt="Custom Menu" loading="lazy">
+    <div class="gal-bdg food">Food</div>
+    <div class="gal-hov"><span>⊕</span><p>Custom Menu</p></div>
+  </div>
+  <div class="gal-it food" data-type="image" data-label="Luxury Catering">
+    <img src="images/cusine_luxury .jpg" alt="Luxury Catering" loading="lazy">
+    <div class="gal-bdg food">Food</div>
+    <div class="gal-hov"><span>⊕</span><p>Luxury Catering</p></div>
+  </div>
+  <div class="gal-it evt" data-type="image" data-label="Professional Staff">
+    <img src="images/cusine profesional staff.jpg" alt="Professional Staff" loading="lazy">
+    <div class="gal-bdg evt">Event</div>
+    <div class="gal-hov"><span>⊕</span><p>Professional Staff</p></div>
+  </div>
+  <div class="gal-it food" data-type="image" data-label="Catering Services">
+    <img src="images/Service_catering services.jpg" alt="Catering" loading="lazy">
+    <div class="gal-bdg food">Food</div>
+    <div class="gal-hov"><span>⊕</span><p>Catering Services</p></div>
+  </div>
+  <div class="gal-it food" data-type="image" data-label="Snacks & Dining">
+    <img src="images/service_snacks and dinning.jpg" alt="Snacks" loading="lazy">
+    <div class="gal-bdg food">Food</div>
+    <div class="gal-hov"><span>⊕</span><p>Snacks & Dining</p></div>
+  </div>
+  <div class="gal-it food" data-type="image" data-label="Veg & Non-Veg Foods">
+    <img src="images/services veg and non veg food.jpg" alt="Foods" loading="lazy">
+    <div class="gal-bdg food">Food</div>
+    <div class="gal-hov"><span>⊕</span><p>Veg & Non-Veg</p></div>
+  </div>
+  <div class="gal-it vid" data-type="video" data-src="images/video1.mp4" data-label="Event Highlights">
+    <video preload="metadata" muted playsinline><source src="images/video1.mp4" type="video/mp4"></video>
+    <div class="gal-bdg vid">Video</div>
+    <div class="gal-hov"><span>▶</span><p>Event Highlights</p></div>
+  </div>
+</div>
+<div class="empty-msg" id="emptyMsg">No items in this category.</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLbGal()">
+  <button class="lb-x" onclick="closeLbGal()">&#10005;</button>
+  <div style="position:relative">
+    <img id="lbImg" src="" alt="" onclick="event.stopPropagation()">
+    <div class="lb-cap" id="lbCap"></div>
+  </div>
+  <button class="lb-prev" onclick="lbNav(-1);event.stopPropagation()">&#8249;</button>
+  <button class="lb-next" onclick="lbNav(1);event.stopPropagation()">&#8250;</button>
+  <div class="lb-cnt" id="lbCnt"></div>
+</div>
+
+<!-- VIDEO POPUP -->
+<div class="vid-pop" id="vidPop" onclick="closeVid()">
+  <button class="lb-x" onclick="closeVid()">&#10005;</button>
+  <video id="popVid" controls onclick="event.stopPropagation()"></video>
+</div>
+
+<div class="pg-footer">© 2026 Perambur Iniyavan Catering & Decoration. All rights reserved.</div>
+<script src="js/script.js"></script>
+</body>
+</html>
